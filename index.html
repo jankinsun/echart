@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="gbk">
-    <!-- ÒıÈë ECharts ÎÄ¼ş -->
+    <!-- å¼•å…¥ ECharts æ–‡ä»¶ -->
     <script src="echarts.min.js"></script>
 	
 	<style>
@@ -13,28 +13,28 @@
 
 
 	<body>
-		<!-- Îª ECharts ×¼±¸Ò»¸ö¾ß±¸´óĞ¡£¨¿í¸ß£©µÄ DOM -->
+		<!-- ä¸º ECharts å‡†å¤‡ä¸€ä¸ªå…·å¤‡å¤§å°ï¼ˆå®½é«˜ï¼‰çš„ DOM -->
 		<div id="main" style="width: 600px;height:400px;"></div>
 		<script type="text/javascript">
-        // »ùÓÚ×¼±¸ºÃµÄdom£¬³õÊ¼»¯echartsÊµÀı
+        // åŸºäºå‡†å¤‡å¥½çš„domï¼Œåˆå§‹åŒ–echartså®ä¾‹
         var myChart = echarts.init(document.getElementById('main'));
 
-        // Ö¸¶¨Í¼±íµÄÅäÖÃÏîºÍÊı¾İ
+        // æŒ‡å®šå›¾è¡¨çš„é…ç½®é¡¹å’Œæ•°æ®
         var option = {
             title: {
-                text: 'ÖĞ¹úÌìÆø'//titleÊÇ±êÌâ
+                text: 'ä¸­å›½å¤©æ°”'//titleæ˜¯æ ‡é¢˜
             },
             tooltip: {},
             legend: {
-                data:['Öù×´Í¼','ÕÛÏßÍ¼']
+                data:['æŸ±çŠ¶å›¾','æŠ˜çº¿å›¾']//è¿™é‡Œçš„data æ•°æ®ä¸ä¸‹é¢çš„seriesç›¸å¯¹åº”
             },
             xAxis: {
-                data: ["±±¾©","ÉÏº£","¹ãÖİ","Ì¨Íå","Ïã¸Û","°²»Õ"]
+                data: ["åŒ—äº¬","ä¸Šæµ·","å¹¿å·","å°æ¹¾","é¦™æ¸¯","å®‰å¾½"]
             },
             yAxis: {
 			type: 'value',
 			axisLabel: {
-				formatter: '{value} ¡ãC'
+				formatter: '{value} Â°C'
 			}
 			},
 			
@@ -42,15 +42,15 @@
             series: [
 			
 			{
-                name: 'Öù×´Í¼',
-                type: 'bar',
+                name: 'æŸ±çŠ¶å›¾',//name ç”¨äºè·å–dataçš„é‡Œé¢çš„   æŸ±çŠ¶å›¾  ç›¸å¯¹åº”  
+                type: 'bar',// ç±»å‹
                 data: [1, 2, 1, 8, 3, 2, 0]
             },
 			
 			
 			
 			{
-            name:'ÕÛÏßÍ¼',
+            name:'æŠ˜çº¿å›¾',
             type:'line',
             data:[1, 2, 1, 8, 3, 2, 0],
             
@@ -62,7 +62,7 @@
 			
         };
 
-        // Ê¹ÓÃ¸ÕÖ¸¶¨µÄÅäÖÃÏîºÍÊı¾İÏÔÊ¾Í¼±í¡£
+        // ä½¿ç”¨åˆšæŒ‡å®šçš„é…ç½®é¡¹å’Œæ•°æ®æ˜¾ç¤ºå›¾è¡¨ã€‚
         myChart.setOption(option);
 		  </script>
 	</body>
