@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <!-- 引入 ECharts 文件 -->
+    <script src="echarts.min.js"></script>
+	
+	<style>
+		#main { margin:0 auto; }
+	</style>
+</head>
+
+
+
+	<body>
+		<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+		<div id="main" style="width: 600px;height:400px;"></div>
+		<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '中国天气'//title是标题
+            },
+            tooltip: {},
+            legend: {
+                data:['柱状图','折线图']
+            },
+            xAxis: {
+                data: ["北京","上海","广州","台湾","香港","安徽"]
+            },
+            yAxis: {
+			type: 'value',
+			axisLabel: {
+				formatter: '{value} °C'
+			}
+			},
+			
+			
+            series: [
+			
+			{
+                name: '柱状图',
+                type: 'bar',
+                data: [1, 2, 1, 8, 3, 2, 0]
+            },
+			
+			
+			
+			{
+            name:'折线图',
+            type:'line',
+            data:[1, 2, 1, 8, 3, 2, 0],
+            
+           
+        }
+    ]
+			
+			
+			
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+		  </script>
+	</body>
+</html>
